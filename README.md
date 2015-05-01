@@ -1,4 +1,3 @@
-# cordova-Callphone
 Callphone
 =========
 

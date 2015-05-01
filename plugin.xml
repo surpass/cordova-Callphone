@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        id="org.surpass.cordova.CallphonePlugin"
+        version="1.0.0">
+
+    <name>Callphone Plugin</name>
+    <description>Callphone for cordova plugin</description>
+    <author>lizc</author>
+    <keywords>Callphone</keywords>
+    <license>Apache 2.0 License</license>
+
+    <engines>
+        <engine name="cordova" version=">=3.0"/>
+    </engines>
+
+    <js-module src="www/CallphonePlugin.js" name="CallphonePlugin">
+            <clobbers target="window.plugins.callphonePlugin"/>
+    </js-module>
+        
+    <!-- android -->
+    <platform name="android">
+    
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="CallphonePlugin">
+                <param name="android-package" value="org.surpass.cordova.CallphonePlugin"/>
+            </feature>
+        </config-file> 
+         <config-file target="AndroidManifest.xml" parent="/manifest">
+				    <uses-permission android:name="android.permission.CALL_PHONE" />
+				　　<uses-permission android:name="android.permission.READ_CALL_LOG" />
+				　　<uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS" />
+				　　<uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+        </config-file>
+        <source-file src="src/android/CallphonePlugin.java" target-dir="src/org/surpass/cordova"/>
+        <source-file src="src/android/PhoneResult.java" target-dir="src/org/surpass/cordova"/>
+
+        
+				
+				        
+	</platform>
+</plugin>
