@@ -1,7 +1,7 @@
 Callphone
 =========
 
-这是一个可以自动更新phonegap android app 的plugin，能显示下载进度条，下载完自动安装。
+这是一个可以拨打电话的phonegap android app 的plugin。
 
 使用方法：
 ========
